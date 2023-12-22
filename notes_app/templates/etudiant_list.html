@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Liste des étudiants{% endblock %}
+
+{% block content %}
+    <h2>Liste des étudiants</h2>
+
+    <ul>
+        {% for etudiant in object_list %}
+            <li>{{ etudiant.nom }} {{ etudiant.prenom }} - {{ etudiant.numero_etudiant }} <a href="{% url 'etudiant_update' pk=etudiant.pk %}">Modifier</a> <a href="{% url 'etudiant_delete' pk=etudiant.pk %}">Supprimer</a></li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'etudiant_create' %}">Ajouter un étudiant</a>
+{% endblock %}

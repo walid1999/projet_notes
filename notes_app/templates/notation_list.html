@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Liste des notations{% endblock %}
+
+{% block content %}
+    <h2>Liste des notations</h2>
+
+    <ul>
+        {% for notation in object_list %}
+            <li>{{ notation.etudiant.nom }} {{ notation.etudiant.prenom }} - {{ notation.matiere.nom }} - {{ notation.note }} <a href="{% url 'notation_update' pk=notation.pk %}">Modifier</a> <a href="{% url 'notation_delete' pk=notation.pk %}">Supprimer</a></li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'notation_create' %}">Ajouter une notation</a>
+{% endblock %}

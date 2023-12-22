@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Liste des matières{% endblock %}
+
+{% block content %}
+    <h2>Liste des matières</h2>
+
+    <ul>
+        {% for matiere in object_list %}
+            <li>{{ matiere.nom }} - {{ matiere.code }} <a href="{% url 'matiere_update' pk=matiere.pk %}">Modifier</a> <a href="{% url 'matiere_delete' pk=matiere.pk %}">Supprimer</a></li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'matiere_create' %}">Ajouter une matière</a>
+{% endblock %}

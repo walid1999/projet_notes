@@ -1,0 +1,10 @@
+<h2>Confirmer la suppression de la notation</h2>
+
+<p>Êtes-vous sûr de vouloir supprimer la notation pour "{{ object.etudiant.nom }} {{ object.etudiant.prenom }} - {{ object.matiere.nom }}" ?</p>
+
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Confirmer la suppression</button>
+</form>
+
+<a href="{% url 'notation_list' %}">Annuler</a>

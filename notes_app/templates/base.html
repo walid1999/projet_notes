@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Gestion de notes{% endblock %}</title>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'etudiant_list' %}">Etudiants</a></li>
+            <li><a href="{% url 'notation_list' %}">Notations</a></li>
+            <li><a href="{% url 'matiere_list' %}">Matieres</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+</body>
+</html>
