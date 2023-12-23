@@ -53,8 +53,14 @@ Assurez-vous d'avoir installé les outils suivants avant de commencer :
 Le projet sera accessible à l'adresse : http://localhost:8000/ 
 
 
+### Crédits ###
 
+Ce projet a été réalisé par :
 
+Calvet Romain
+Hadeg Enzo
+Turam-Ullien Elodie
+Ben khelfallah Walid
 
 
 
